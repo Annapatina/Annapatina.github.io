@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background: white;
+    color: #0917a8;
+    font-family: 'Inter',sans-serif;
+}
+
+.about-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: clamp(40px,6vw,80px);
+    display: flex;
+    gap: clamp(40px,8vw,100px);
+    align-items: flex-start;
+}
+
+/* ====================== 左侧个人资料 ====================== */
+.profile {
+    width: min(30vw,350px);
+    min-width: 260px;
+    text-align: center;
+}
+
+.profile-img {
+    width: min(80%,280px);
+    height: auto;
+    aspect-ratio: 4/5;
+    object-fit: fill;
+}
+
+.profile h1 {
+    font-family: 'Space Grotesk',sans-serif;
+    font-size: clamp(32px,3vw,42px);
+    letter-spacing: 3px;
+    line-height: 1.1;
+    margin-top: 40px;
+}
+
+.profile p {
+    font-size: 15px;
+    line-height: 2;
+    color: #5360d6;
+    margin-top: 12px;
+}
+
+.profile a {
+    display: inline-block;
+    margin-top: 40px;
+    font-family: 'Space Grotesk',sans-serif;
+    text-decoration: none;
+    color: #0917a8;
+    transition: opacity 0.2s;
+}
+
+    .profile a:hover {
+        opacity: 0.6;
+    }
+
+/* ====================== 右侧手绘面板核心修改 ====================== */
+.about-board {
+    flex: 1;
+    min-height: 650px;
+    background-image: url("images/about-border.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    /* 开启相对定位，用于标题绝对居中 */
+    position: relative;
+    /* 整体外留白，避开四周丝带装饰 */
+    padding: 120px 35px 50px 35px;
+}
+
+
+
+/* 正文内容区：向下留出顶部标题栏空间，左右缩进避开侧边飘带 */
+.board-content {
+    max-width: 700px;
+    padding: 0 clamp(10px, 2vw, 20px);
+}
+
+    .board-content h3 {
+        font-family: 'Space Grotesk',sans-serif;
+        font-size: 24px;
+        margin: 45px 0 12px;
+    }
+
+    .board-content p {
+        font-size: 16px;
+        line-height: 2;
+        color: #5360d6;
+        margin-bottom: 16px;
+    }
+
+/* ====================== 移动端适配 ====================== */
+@media(max-width:900px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile {
+        width: 100%;
+    }
+
+    .about-board {
+        width: 100%;
+        padding: 100px 20px 40px 20px;
+    }
+
+    .board-title {
+        top: 24px;
+        font-size: 32px;
+    }
+}
