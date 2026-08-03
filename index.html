@@ -40,10 +40,8 @@
 
 
             <p class="role">
-
-                3D Environment Artist<br>
-                Game Developer
-
+                Game Artist <br>
+                & Developer
             </p>
 
 
@@ -110,77 +108,30 @@
 
 
 
-
-            <div class="projects">
-
-
-
-
-
-                <div class="project-card">
-
-
-                    <img src="images/splatoon.png">
-
-
-                    <div class="project-info">
-
-
-                        <h3>
-                            Splatoon Inspired Room
-                        </h3>
-
-
-                        <p>
-                            UE5 Environment / 3D Art
-                        </p>
-
-
-                        <p class="tools">
-                            Blender · Substance Painter · UE5
-                        </p>
-
-
-                    </div>
-
-
-                </div>
+<div class="projects">
+  <!-- 单个项目：用 <a> 包住整个卡片，href填你的项目页面文件名 -->
+  <a href="splatoon-room.html" class="project-card">
+    <img src="images/splatoon.png" alt="Splatoon Inspired Room">
+    <div class="project-info">
+      <h3>Splatoon Inspired Room</h3>
+      <p>UE5 Environment Art</p>
+      <p class="tools">Blender • Substance Painter • Unreal Engine 5</p>
+    </div>
+  </a>
 
 
 
 
 
 
-
-                <div class="project-card">
-
-
-                    <img src="images/bathroom.png">
-
-
-                    <div class="project-info">
-
-
-                        <h3>
-                            Bathroom Project
-                        </h3>
-
-
-                        <p>
-                            Environment / Storytelling
-                        </p>
-
-
-                        <p class="tools">
-                            Blender · Substance Designer · UE5
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
+  <a href="bathroom-project.html" class="project-card">
+      <img src="images/bathroom.png">
+      <div class="project-info">
+          <h3>Bathroom Project</h3>
+          <p>Environment / Storytelling</p>
+          <p class="tools">Blender · Substance Designer · UE5</p>
+      </div>
+  </a>
 
 
 
@@ -233,7 +184,43 @@
 
     </div>
 
+  <!-- 顶部丝带横幅 -->
+    <div class="ribbon-banner">
+        <img src="images/bow.png" alt="ribbon decoration">
+    </div>
+
+
 
 </body>
 
 </html>
+
+<script>
+// 点击生成星星特效
+document.addEventListener('click', function(e) {
+  // 创建星星元素
+  const star = document.createElement('span');
+  star.innerText = '💫';
+  // 样式设置
+  star.style.position = 'fixed';
+  star.style.left = e.clientX + 'px';
+  star.style.top = e.clientY + 'px';
+  star.style.pointerEvents = 'none'; // 不阻挡点击
+  star.style.fontSize = Math.random() * 20 + 10 + 'px'; // 随机大小
+  star.style.opacity = '1';
+  star.style.zIndex = '9999'; // 最高层级，不会被遮挡
+  star.style.transition = 'all 0.8s ease-out';
+  document.body.appendChild(star);
+
+  // 动画：向上飘 + 透明度消失
+  setTimeout(() => {
+    star.style.transform = `translateY(-100px)`;
+    star.style.opacity = '0';
+  }, 10);
+
+  // 动画结束删除元素，不占用内存
+  setTimeout(() => {
+    star.remove();
+  }, 800);
+});
+</script>
