@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Storytelling Bathroom | Yingzhou Zhang Portfolio</title>
+    <!-- 全局基础样式（和首页共用） -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 项目页专属样式+弹窗 -->
+    <link rel="stylesheet" href="project.css">
+    <!-- 字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 页面案例基础间距 */
+        .case-section {
+            margin: 4rem 0;
+        }
+
+            .case-section h3 {
+                font-family: "Space Grotesk", sans-serif;
+                font-size: 1.4rem;
+                font-weight: 700;
+                margin-bottom: 1.2rem;
+                color: #0917a8;
+                border-bottom: 1px solid #c5cbf5;
+                padding-bottom: 8px;
+            }
+
+        .case-subtitle {
+            font-weight: 600;
+            margin: 2.2rem 0 1rem;
+            font-size: 1.1rem;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* 1. 通栏大图 */
+        .full-width-img {
+            width: 100%;
+            display: block;
+            margin: 30px auto;
+            border-radius: 24px;
+            cursor: zoom-in;
+        }
+
+        /* 2. 图文左右混排容器 */
+        .text-image-row {
+            display: flex;
+            gap: 28px;
+            margin: 24px 0 36px;
+            align-items: flex-start;
+        }
+
+        .text-block {
+            flex: 1;
+        }
+
+        .side-small-img {
+            width: 240px;
+            flex-shrink: 0;
+            border-radius: 16px;
+            cursor: zoom-in;
+        }
+        /* 反向布局：图左 文字右 */
+        .text-image-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* 移动端适配 */
+        @media(max-width:768px) {
+            .text-image-row {
+                flex-direction: column;
+            }
+
+                .text-image-row.reverse {
+                    flex-direction: column;
+                }
+
+            .side-small-img {
+                width: 100%;
+            }
+        }
+
+        /* 简易多图横向画廊 */
+        .mini-gallery {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+            .mini-gallery img {
+                width: 100%;
+                border-radius: 12px;
+                cursor: zoom-in;
+            }
+
+        @media(max-width:768px) {
+            .mini-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Sketchfab嵌入框样式 */
+        .sketchfab-wrap {
+            width: 100%;
+            margin: 20px 0 32px;
+        }
+
+            .sketchfab-wrap iframe {
+                width: 100%;
+                height: 420px;
+                border-radius: 20px;
+                border: none;
+            }
+
+        .sketchfab-desc {
+            font-size: 13px;
+            color: #4A4A4A;
+            margin-top: 8px;
+        }
+
+            .sketchfab-desc a {
+                color: #1CAAD9;
+                font-weight: 600;
+                text-decoration: none;
+            }
+
+        /* 视频卡片跳转样式 */
+        .video-card {
+            position: relative;
+            display: block;
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+            .video-card img {
+                width: 100%;
+                display: block;
+                cursor: pointer;
+            }
+
+        .video-tip {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 13px;
+        }
+
+        .video-card:hover img {
+            transform: scale(1.03);
+            transition: 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧侧边栏 完全复用首页结构 -->
+        <div class="sidebar">
+            <h1>YINGZHOU ZHANG</h1>
+            <div class="role">
+                3D Environment Artist<br>Game Art Designer
+            </div>
+            <nav>
+                <a href="index.html">WORK</a>
+                <a href="about.html">ABOUT</a>
+            </nav>
+            <div class="social">
+                <a href="#"><img src="images/twitter.png" alt="X"></a>
+                <a href="#"><img src="images/artstation.png" alt="ArtStation"></a>
+                <a href="#"><img src="images/bluesky.png" alt="Social"></a>
+            </div>
+        </div>
+
+        <!-- 右侧项目内容区 -->
+        <div class="project-page">
+            <a href="index.html" class="back-link">← Back to All Works</a>
+
+            <!-- 页面顶部通栏主渲染大图 -->
+            <img src="images/bathroom.png" alt="Substance Designer Bathroom Project" class="full-width-img">
+
+            <!-- 标题与标签 -->
+            <h2 class="project-title">Real Time Material Bathroom Project</h2>
+            <div class="project-tagline">
+                Real-Time Material Design | Substance Designer • Substance Painter • Blender • Unreal Engine 5
+            </div>
+
+
+            <!-- 2. BACKSTORY -->
+            <section class="case-section">
+                <h3>BACKSTORY</h3>
+                <div class="text-image-row">
+                    <div class="text-block">
+                        <p>
+                            This bathroom scene was completed as my core coursework for Real-time Digital Materials and Surfaces. I’ve long wanted to build a tiny, intimate personal living space of my own design. The concept of a girl’s cozy private bathroom felt full of storytelling potential, so I built this whole scene to showcase material creation skills.
+                        </p>
+                        <p style="opacity:0.85; font-size:15px;">
+                            Every texture you see within the environment was hand-built from scratch using Substance tools, and I will break down each material workflow below.
+                        </p>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- 3. PROBLEM / WORK STEP BY STEP -->
+            <section class="case-section">
+                <h3>PROBLEM / WORK STEP BY STEP</h3>
+
+                <h4 class="case-subtitle">First Substance Work: Bathroom Ceramic Tile</h4>
+                <p>
+                    This was my first time learning Substance Designer, so I started with a basic repeating bathroom tile material. I added subtle hand-drawn small floral decals, soft ceramic gloss and slight grout wear to create a gentle pastel tile texture.
+                </p>
+                <!-- Sketchfab 瓷砖材质嵌入 -->
+                <div class="sketchfab-wrap">
+                    <iframe title="Bathroom tile Material" src="https://sketchfab.com/models/3fa0ecd853bd4075bafe7af06e311663/embed"></iframe>
+                    <p class="sketchfab-desc">
+                        <a href="https://sketchfab.com/3d-models/bathroom-tile-material-3fa0ecd853bd4075bafe7af06e311663" target="_blank">Bathroom tile Material</a> by
+                        <a href="https://sketchfab.com/yingzhouzhang16" target="_blank">yingzhouzhang16</a> on Sketchfab
+                    </p>
+                </div>
+                <div class="mini-gallery">
+                    <img src="images/bathroom/tile.png" alt="Tile Material Cube Preview">
+                    <img src="images/bathroom/tilereference.jpg" alt="Tile Floral Detail Close-up">
+                </div>
+
+                <h4 class="case-subtitle">Non-organic Materials</h4>
+                <p>
+                    After getting familiar with Substance Designer node logic, I expanded to a series of non-organic materials for bathroom daily items: decorative box cutter, printed toilet paper, blister pill packaging and more.
+                </p>
+
+                <!-- Box Cutter Section -->
+                <h5 style="margin-top:24px; font-size:16px;">Decorative Box Cutter</h5>
+                <div class="sketchfab-wrap">
+                    <iframe title="Box cutter 𐙚⊹₊⋆☆" src="https://sketchfab.com/models/350c6967d3524b0a8eb85d0426021ec5/embed"></iframe>
+                    <p class="sketchfab-desc">
+                        <a href="https://sketchfab.com/3d-models/box-cutter-350c6967d3524b0a8eb85d0426021ec5" target="_blank">Box cutter 𐙚⊹₊⋆☆</a> by
+                        <a href="https://sketchfab.com/yingzhouzhang16" target="_blank">yingzhouzhang16</a> on Sketchfab
+                    </p>
+                </div>
+                <div class="mini-gallery">
+                    <img src="images/bathroom/papercutter.jpg" alt="Box Cutter Full Scene Shot">
+                    <img src="images/bathroom/papercutterclose.jpg" alt="Ribbon & Gem Detail Close-up">
+                </div>
+
+                <!-- Toilet Paper Section -->
+                <h5 style="margin-top:24px; font-size:16px;">Printed Toilet Paper Roll</h5>
+                <div class="sketchfab-wrap">
+                    <iframe title="⋆.˚⟡⊹₊⋆Toilet Paper⋆.˚⟡⊹₊⋆angel" src="https://sketchfab.com/models/08000ee4c8ad4e93bc2366d4be4c5a8a/embed"></iframe>
+                    <p class="sketchfab-desc">
+                        <a href="https://sketchfab.com/3d-models/toilet-paper-angel-08000ee4c8ad4e93bc2366d4be4c5a8a" target="_blank">⋆.˚⟡⊹₊⋆Toilet Paper⋆.˚⟡⊹₊⋆angel</a> by
+                        <a href="https://sketchfab.com/yingzhouzhang16" target="_blank">yingzhouzhang16</a> on Sketchfab
+                    </p>
+                </div>
+                <div class="text-image-row reverse">
+                    <div class="text-block">
+                        <p>I designed handwritten soft text printed on toilet paper, with subtle paper crease and fibrous roughness to mimic real thin tissue texture.</p>
+                    </div>
+                    <img class="side-small-img" src="images/bathroom/toiletpaper.jpg" alt="Toilet Paper In Scene">
+                </div>
+                <div class="mini-gallery">
+                    <img src="images/bathroom/toiletpaper1.jpg" alt="Toilet Paper Main Node Graph">
+                    <img src="images/bathroom/toiletpaper2.jpg" alt="Paper Side Layer Node Graph">
+                </div>
+
+                <!-- Pill Blister Section -->
+                <h5 style="margin-top:24px; font-size:16px;">Pill Blister Packaging</h5>
+                <div class="text-image-row">
+                    <img class="side-small-img" src="images/bathroom/pile.png" alt="Pill Material SBS Preview">
+                    <div class="text-block">
+                        <p>This material combines transparent plastic blister, textured foil backing and smooth pill surface, with subtle embossed text details on the metal layer.</p>
+                    </div>
+                </div>
+                <div class="mini-gallery">
+                    <img src="images/bathroom/piles.png" alt="Pill Pack In Bathroom Scene">
+                    <img src="images/bathroom/pile1.jpg" alt="Blister Top Node Graph">
+                    <img src="images/bathroom/pile2.jpg" alt="Foil Back Node Graph">
+                </div>
+
+                <!-- Pocky Section -->
+                <h4 class="case-subtitle">Organic Material: Pocky Biscuit</h4>
+                <p>
+                    After finishing all hard surface props, I moved on to organic material creation, focusing on cookie and cream coated Pocky sticks, with tiny chocolate crumb detail and baked biscuit texture variation.
+                </p>
+                <div class="sketchfab-wrap">
+                    <iframe title="⊹˖ᯓ★. ݁₊ Pocky Cookie and Cream Flavor ❥ 𐙚⊹₊⋆☆" src="https://sketchfab.com/models/831cf9830c0d42bb8a6b3527654d8b55/embed"></iframe>
+                    <p class="sketchfab-desc">
+                        <a href="https://sketchfab.com/3d-models/pocky-cookie-and-cream-flavor-831cf9830c0d42bb8a6b3527654d8b55" target="_blank">Pocky Cookie and Cream Flavor</a> by
+                        <a href="https://sketchfab.com/yingzhouzhang16" target="_blank">yingzhouzhang16</a> on Sketchfab
+                    </p>
+                </div>
+                <div class="text-image-row reverse">
+                    <div class="text-block">
+                        <p>Two separate node graphs were built: one for the baked biscuit base, another for the cream chocolate coating with scattered cookie crumbs noise layers.</p>
+                    </div>
+                    <img class="side-small-img" src="images/bathroom/pocky.jpg" alt="Pocky In Scene Render">
+                </div>
+                <div class="mini-gallery">
+                    <img src="images/bathroom/pocky1.jpg" alt="Pocky Base Node Graph">
+                    <img src="images/bathroom/pocky2.jpg" alt="Cream Coating Node Graph">
+                </div>
+            </section>
+
+
+            <!-- 5. OUTCOME -->
+            <section class="case-section">
+                <h3>OUTCOME</h3>
+                <div class="text-image-row reverse">
+                    <div class="text-block">
+                        <p>
+                            Every texture created in this project is fully tileable and reusable for future interior environment works. Later I expanded this bathroom scene into a small playable real-time demo game, stay toned!
+                        </p>
+                        <a href="https://youtu.be/qwHGMgto95I?si=G3RwKCqIY0mFAGgW" target="_blank" class="video-card" style="margin-top:16px;">
+                            <img src="images/bathroom.png" alt="Playable Bathroom Game Demo Thumbnail">
+                            <span class="video-tip">Click to Watch Video Showcase</span>
+                        </a>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- 6. REFLECTION -->
+            <section class="case-section">
+                <h3>REFLECTION</h3>
+                <ul style="line-height: 1.7; padding-left: 1.2rem;">
+                    <li>This was my first full workflow project with Substance Designer; I learned to build complex layered PBR textures from zero using procedural node systems;</li>
+                    <li>I mastered balancing different material physical properties (ceramic gloss, paper softness, plastic transparency, baked food roughness) while keeping the whole scene unified in pastel blue-white tone;</li>
+                    <li>Procedural tileable textures drastically speed up interior scene production, and I will rely more on Designer for environment base materials in future projects;</li>
+                    <li>I really enjoyed learning this software and building a personal cozy space that matches my artistic vision; I plan to add more interactive gameplay details to the upcoming playable demo.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- 底部丝带装饰 和首页统一 -->
+    <div class="ribbon-banner">
+        <img src="images/bow.png" alt="ribbon">
+    </div>
+
+    <!-- 图片放大弹窗容器 -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="preview big" id="lightbox-img">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+        // 全部图片统一支持点击放大
+        const previewImages = document.querySelectorAll('.full-width-img, .side-small-img, .mini-gallery img, .main-preview-img, .video-card img');
+
+        previewImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            })
+        })
+
+        // 关闭弹窗逻辑不变
+        closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) lightbox.classList.remove('active');
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') lightbox.classList.remove('active');
+        })
+    </script>
+</body>
+</html>

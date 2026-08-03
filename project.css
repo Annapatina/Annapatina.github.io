@@ -1,0 +1,107 @@
+/* ========== 项目页面通用布局 ========== */
+.project-page {
+    flex: 1;
+}
+.back-link {
+    display: inline-block;
+    color: #0917a8;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+.back-link:hover {
+    opacity: 0.6;
+}
+.main-preview-img {
+    width: 100%;
+    border-radius: 32px;
+    box-shadow: 0 15px 35px rgba(9,23,168,0.08);
+    margin-bottom: 40px;
+    cursor: zoom-in;
+}
+.project-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 12px;
+}
+.project-tagline {
+    color: #5360d6;
+    font-size: 15px;
+    margin-bottom: 50px;
+    line-height: 1.8;
+}
+.desc-block h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    margin: 50px 0 20px;
+}
+.desc-block p {
+    line-height: 1.7;
+    font-size: 16px;
+    max-width: 1000px;
+    margin-bottom: 16px;
+}
+.detail-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+.detail-gallery img {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(9,23,168,0.06);
+    cursor: zoom-in;
+}
+
+/* 通栏大图专用样式 */
+.full-width-img {
+    width: 100%;
+    display: block; /* 实现居中必备 */
+    margin: 30px auto; /* 上下间距+水平居中 */
+    border-radius: 16px; /* 和上面三张小图统一圆角 */
+    overflow: hidden;
+}
+
+/* ========== 图片放大弹窗 Lightbox 全局 ========== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.lightbox.active {
+  display: flex;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 16px;
+  object-fit: contain;
+}
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 移动端适配 */
+@media(max-width:900px) {
+    .main-preview-img {
+        border-radius: 20px;
+    }
+    .project-title {
+        font-size: 28px;
+    }
+}

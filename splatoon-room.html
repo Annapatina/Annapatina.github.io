@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splatoon Inspired Room | Portfolio</title>
+    <!-- 全局基础样式（和首页共用） -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 项目页专属样式+弹窗 -->
+    <link rel="stylesheet" href="project.css">
+    <!-- 字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 页面案例基础间距 */
+        .case-section {
+            margin: 4rem 0;
+        }
+
+            .case-section h3 {
+                font-family: "Space Grotesk", sans-serif;
+                font-size: 1.4rem;
+                font-weight: 700;
+                margin-bottom: 1.2rem;
+                color: #0917a8;
+                border-bottom: 1px solid #c5cbf5;
+                padding-bottom: 8px;
+            }
+
+        .case-subtitle {
+            font-weight: 600;
+            margin: 2.2rem 0 1rem;
+            font-size: 1.1rem;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* 1. 通栏大图（示意图顶部宽幅图） */
+        .full-width-img {
+            width: 100%;
+            border-radius: 24px;
+            margin: 16px 0 32px;
+            cursor: zoom-in;
+        }
+
+        /* 2. 图文左右混排容器（核心错落排版，对应示意图小方块穿插） */
+        .text-image-row {
+            display: flex;
+            gap: 28px;
+            margin: 24px 0 36px;
+            align-items: flex-start;
+        }
+
+        .text-block {
+            flex: 1;
+        }
+
+        .side-small-img {
+            width: 240px;
+            flex-shrink: 0;
+            border-radius: 16px;
+            cursor: zoom-in;
+        }
+        /* 反向布局：图左 文字右 */
+        .text-image-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* 移动端适配：混排自动变单列 */
+        @media(max-width:768px) {
+            .text-image-row {
+                flex-direction: column;
+            }
+
+                .text-image-row.reverse {
+                    flex-direction: column;
+                }
+
+            .side-small-img {
+                width: 100%;
+            }
+        }
+
+        /* 简易三图横向窄画廊（可选） */
+        .mini-gallery {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+            .mini-gallery img {
+                width: 100%;
+                border-radius: 12px;
+                cursor: zoom-in;
+            }
+
+        @media(max-width:768px) {
+            .mini-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧侧边栏 完全复用首页结构 -->
+        <div class="sidebar">
+            <h1>YINGZHOU ZHANG</h1>
+            <div class="role">
+                3D Environment Artist<br>Game Art Designer
+            </div>
+            <nav>
+                <a href="index.html">WORK</a>
+                <a href="about.html">ABOUT</a>
+            </nav>
+            <div class="social">
+                <a href="#"><img src="images/twitter.png" alt="X"></a>
+                <a href="#"><img src="images/artstation.png" alt="ArtStation"></a>
+                <a href="#"><img src="images/bluesky.png" alt="Social"></a>
+            </div>
+        </div>
+
+        <!-- 右侧项目内容区 -->
+        <div class="project-page">
+            <a href="index.html" class="back-link">← Back to All Works</a>
+
+            <!-- 页面顶部通栏主图（示意图最上方宽蓝色块） -->
+            <img src="images/splatoon1.png" alt="Splatoon Inki Underground Lab Full Render" class="full-width-img">
+
+            <!-- 标题与标签 -->
+            <h2 class="project-title">Splatoon 3 Inki Underground Research Lab</h2>
+            <div class="project-tagline">
+                Full 3D Environment Art Pipeline | Blender • Substance Painter • Unreal Engine 5
+            </div>
+
+            <!-- 1. SUMMARY -->
+            <section class="case-section">
+                <h3>SUMMARY</h3>
+                <p>
+                    This project covered the complete 3D environment production pipeline, including original concept design, 3D modeling, UV mapping, PBR texturing, scene assembly & lighting setup inside UE5, and lightweight interactive ink effects. Every stage of production was independently completed by myself.
+                </p>
+            </section>
+
+            <!-- 2. BACKSTORY -->
+            <section class="case-section">
+                <h3>BACKSTORY</h3>
+                <!-- 图文混排：文字左，小概念图右（对应示意图小方块穿插） -->
+                <div class="text-image-row">
+                    <div class="text-block">
+                        <p>
+                            This environment was developed as a core assignment for my Game Art course. The project brief required creating a full playable 3D environment built around an original character concept. I designed my custom Splatoon 3 OC named Inki, and built a hidden underground research laboratory as her exclusive workspace.
+                        </p>
+                        
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- 3. PROBLEM / WORK STEP BY STEP -->
+            <section class="case-section">
+                <h3>WORK STEP BY STEP</h3>
+
+                <h4 class="case-subtitle">Concept & World Building</h4>
+                <p>
+                    Inki is a passionate young ink squid whose life’s work is inventing brand-new ink-based weapons. Beneath the busy, colorful streets of Splatsville, she hides a secret underground lab, fully concealed under an unremarkable city manhole cover to avoid public attention.
+                </p>
+
+                <h4 class="case-subtitle">Artistic Reference Research</h4>
+                <!-- 反向混排：图左，文字右 -->
+                <div class="text-image-row reverse">
+                    <div class="text-block">
+                        <p>
+                            I conducted extensive visual research on Splatoon’s signature stylized art language, drawing reference from its official environmental architecture and character design language. I also studied Jinx’s chaotic workshop hideout from Arcane, blending messy cyberpunk inventor aesthetics into my underground lab layout.
+                        </p>
+                    </div>
+                    <img class="side-small-img" src="images/splatoon/reference.png" alt="Visual Reference Board">
+                </div>
+                <!-- 三张小概念横向画廊 -->
+                <div class="mini-gallery">
+                    <img src="images/splatoon/concept1.png" alt="Lab Layout Sketch">
+                    <img src="images/splatoon/concept2.png" alt="Concept Art">
+                    <img src="images/splatoon/concept3.png" alt="Prop Design">
+                </div>
+
+                <h4 class="case-subtitle">Blockout & Final Scene Modeling</h4>
+                <p>
+                    I started with rough blockout geometry in Blender to validate spatial layout, movement flow and camera framing. After layout approval, I refined all architectural structures and individual scene props into polished high-quality meshes.
+                </p>
+                <div class="mini-gallery">
+                    <img src="images/splatoon/table.png" alt="Concept Art">
+                    <img src="images/splatoon/room.png" alt="Lab Layout Sketch">
+                    <img src="images/splatoon/scene.png" alt="Prop Design">
+                </div>
+                <!-- 通栏宽幅白模大图 -->
+                <img class="full-width-img" src="images/splatoon/models.png" alt="Prop Design">
+
+
+                <h4 class="case-subtitle">Material & Texturing Workflow</h4>
+                <p>
+                    Most scene PBR materials were produced within Substance Painter. I used built-in Smart Materials as base surface layers, then hand-painted custom ink graffiti, scratches and sticker decals on top. Special material behaviors including transparent glass and self-glowing emissive ink panels were fine-tuned directly inside UE5 material instances.
+                </p>
+                <div class="text-image-row">
+                    <img class="side-small-img" src="images/splatoon/texturing.png" alt="Substance Painter Layer Stack">
+                    <div class="text-block">
+                        <p>Custom hand-painted graffiti decals are the core visual highlight of the scene, matching Splatoon’s signature street ink culture aesthetic.</p>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. RESOLUTION -->
+            <section class="case-section">
+                <h3>RESOLUTION</h3>
+                <p>
+                    All modeled assets, custom textures, lighting layers and interactive ink VFX were fully integrated into Unreal Engine 5. I built layered skylight + point light lighting groups, calibrated color grading to match Splatoon’s saturated cartoon color palette, and rendered a series of high-quality finished scene shots for portfolio presentation.
+                </p>
+                <!-- 两张渲染大图并排通栏 -->
+                <div class="mini-gallery" style="grid-template-columns: 1fr 1fr;">
+                    <img src="images/splatoon/finalcouch.png" alt="Lab Wide Shot Render">
+                    <img src="images/splatoon/finaltable.png" alt="Workbench Close Render">
+                </div>
+                <div class="mini-gallery" style="grid-template-columns: 1fr 1fr;">
+                    <img src="images/splatoon/finalfull.png" alt="Corridor Perspective Render">
+                    <img src="images/splatoon/finalclose.png" alt="Manhole Entrance Render">
+                </div>
+            </section>
+
+            <!-- 5. OUTCOME -->
+            <section class="case-section">
+                <h3>OUTCOME</h3>
+                <div class="text-image-row reverse">
+                    <div class="text-block">
+                        <p>
+                            The finished underground lab environment can be packaged as a lightweight walkable demo inside UE5. All modular props and architectural assets are reusable, and can be expanded to build additional Splatoon fan-made scenes in future projects.
+                        </p>
+                    </div>
+                    <!-- 视频跳转卡片 替换原有图片 -->
+                    <a href="https://www.bilibili.com/video/BV1quZrYcEkM/?share_source=copy_web&vd_source=2f6a8a47ba775ed10ea6e655c00542ac" target="\_blank" class="video-card side-small-img">
+                        <!-- 视频底部文字提示 -->
+                        <span class="video-tip">Click to Watch Full Demo Video</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 6. REFLECTION -->
+            <section class="case-section">
+                <h3>REFLECTION</h3>
+                <ul style="line-height: 1.7; padding-left: 1.2rem;">
+                    <li>
+                        This project was my first full 3D environment created from concept to final render.I made it in my Core Principle: Game Art class.
+                        It helped me master core production skills (modeling, texturing, scene assembly) and develop a
+                        personal stylized workflow.
+                        I experimented with decal creation, storytelling through props, and making spaces feel "lived-in" rather
+                        than simply built.
+                    </li>
+                    <li>
+                        Looking back, it feels like I created a mini DLC for a game I love.
+                        Through this project, I realized that 3D art isn’t just about technical execution—it’s a way to tell stories
+                        and build emotional connections with the audience.
+                        I'm excited to continue exploring stylized environment design and developing my own artistic language.
+
+                    </li>
+                    
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- 底部丝带装饰 和首页统一 -->
+    <div class="ribbon-banner">
+        <img src="images/bow.png" alt="ribbon">
+    </div>
+
+    <!-- 图片放大弹窗容器 -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="preview big" id="lightbox-img">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+        // 全部图片统一支持点击放大
+        const previewImages = document.querySelectorAll('.full-width-img, .side-small-img, .mini-gallery img, .main-preview-img');
+
+        previewImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            })
+        })
+
+        // 关闭弹窗逻辑不变
+        closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) lightbox.classList.remove('active');
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') lightbox.classList.remove('active');
+        })
+
+    </script>
+</body>
+</html>
