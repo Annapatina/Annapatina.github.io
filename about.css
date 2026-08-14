@@ -9,6 +9,30 @@ body {
     background: white;
     color: #0917a8;
     font-family: 'Inter',sans-serif;
+
+/* å›¾ç‰‡è·¯å¾„ï¼Œæ”¾åˆ°imagesæ–‡ä»¶å¤¹ */
+    background-image: url("images/bg.JPG");
+    /* å¹³é“ºé‡å¤ */
+    background-repeat: no-repeat;
+    /* å›ºå®šèƒŒæ™¯ï¼Œæ»šåŠ¨é¡µé¢ä¸ä¼šè·Ÿç€åŠ¨ï¼ˆå¯é€‰ï¼Œä¸æƒ³è¦å°±åˆ æ‰è¿™è¡Œï¼‰ */
+background-position: center center;
+    background-attachment: fixed;
+    /* èƒŒæ™¯é¢œè‰²å…œåº•ï¼Œé˜²æ­¢å›¾ç‰‡åŠ è½½æ…¢ç©ºç™½ */
+    background-color: #f0f8ff;
+ min-height: 100vh;
+    position: relative;
+    margin: 0;
+ /* å®½é«˜100%ï¼Œå®Œæ•´è´´åˆå±å¹•ï¼Œå¼ºåˆ¶æ”¾å¤§é“ºæ»¡ */
+    background-size: 100% 100%;
+}
+
+/* åŠé€æ˜ç™½è‰²é®ç½©ï¼Œå¼±åŒ–èƒŒæ™¯ï¼Œæ–‡å­—æ›´æ¸…æ™° */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: -1;
 }
 
 .about-container {
@@ -21,7 +45,7 @@ body {
     align-items: flex-start;
 }
 
-/* ====================== ×ó²à¸öÈË×ÊÁÏ ====================== */
+/* ====================== å·¦ä¾§ä¸ªäººèµ„æ–™ ====================== */
 .profile {
     width: min(30vw,350px);
     min-width: 260px;
@@ -63,7 +87,7 @@ body {
         opacity: 0.6;
     }
 
-/* ====================== ÓÒ²àÊÖ»æÃæ°åºËĞÄĞŞ¸Ä ====================== */
+/* ====================== å³ä¾§æ‰‹ç»˜é¢æ¿æ ¸å¿ƒä¿®æ”¹ ====================== */
 .about-board {
     flex: 1;
     min-height: 650px;
@@ -71,18 +95,18 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    /* ¿ªÆôÏà¶Ô¶¨Î»£¬ÓÃÓÚ±êÌâ¾ø¶Ô¾ÓÖĞ */
+    /* å¼€å¯ç›¸å¯¹å®šä½ï¼Œç”¨äºæ ‡é¢˜ç»å¯¹å±…ä¸­ */
     position: relative;
-    /* ÕûÌåÍâÁô°×£¬±Ü¿ªËÄÖÜË¿´ø×°ÊÎ */
-    padding: 120px 35px 50px 35px;
+    /* æ•´ä½“å¤–ç•™ç™½ï¼Œé¿å¼€å››å‘¨ä¸å¸¦è£…é¥° */
+    padding: 140px 45px 90px 45px;
 }
 
 
 
-/* ÕıÎÄÄÚÈİÇø£ºÏòÏÂÁô³ö¶¥²¿±êÌâÀ¸¿Õ¼ä£¬×óÓÒËõ½ø±Ü¿ª²à±ßÆ®´ø */
+/* æ­£æ–‡å†…å®¹åŒºï¼šå‘ä¸‹ç•™å‡ºé¡¶éƒ¨æ ‡é¢˜æ ç©ºé—´ï¼Œå·¦å³ç¼©è¿›é¿å¼€ä¾§è¾¹é£˜å¸¦ */
 .board-content {
     max-width: 700px;
-    padding: 0 clamp(10px, 2vw, 20px);
+    padding: 0 55px;
 }
 
     .board-content h3 {
@@ -98,7 +122,24 @@ body {
         margin-bottom: 16px;
     }
 
-/* ====================== ÒÆ¶¯¶ËÊÊÅä ====================== */
+/* åº•éƒ¨ä¸å¸¦è£…é¥° */
+.ribbon-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* ä¸Šè¾¹è·æ‹‰å¼€å’Œä¸Šæ–¹æ–‡å­—çš„è·ç¦»ï¼Œä¸‹è¾¹è·ç•™é¡µé¢åº•éƒ¨ç•™ç™½ */
+    padding: 5px 20px 20px;
+}
+.ribbon-banner img {
+    width: 45%;
+    max-width: 550px;
+    height: auto;
+    object-fit: contain;
+
+
+}
+
+/* ====================== ç§»åŠ¨ç«¯é€‚é… ====================== */
 @media(max-width:900px) {
     .about-container {
         flex-direction: column;
@@ -118,4 +159,12 @@ body {
         top: 24px;
         font-size: 32px;
     }
+}
+
+@media(max-width:900px) {
+.ribbon-banner img {
+    width: 75%;
+}
+.ribbon-banner {
+    padding: 30px 10px 15px;
 }
