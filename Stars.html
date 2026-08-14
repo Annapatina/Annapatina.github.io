@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stars 2.5D Puzzle Game | Yingzhou Zhang Portfolio</title>
+    <!-- 全局基础样式 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 项目共用样式 -->
+    <link rel="stylesheet" href="project.css">
+    <!-- 字体加载 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 页面案例基础间距 */
+        .case-section {
+            margin: 4rem 0;
+        }
+
+            .case-section h3 {
+                font-family: "Space Grotesk", sans-serif;
+                font-size: 1.4rem;
+                font-weight: 700;
+                margin-bottom: 1.2rem;
+                color: #0917a8;
+                border-bottom: 1px solid #c5cbf5;
+                padding-bottom: 8px;
+            }
+
+        .case-subtitle {
+            font-weight: 600;
+            margin: 2.2rem 0 1rem;
+            font-size: 1.1rem;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* 通栏大图 */
+        .full-width-img {
+            width: 100%;
+            display: block;
+            margin: 30px auto;
+            border-radius: 24px;
+            cursor: zoom-in;
+        }
+
+        /* 图文左右混排容器 */
+        .text-image-row {
+            display: flex;
+            gap: 28px;
+            margin: 24px 0 36px;
+            align-items: flex-start;
+        }
+
+        .text-block {
+            flex: 1;
+        }
+
+        .side-small-img {
+            width: 240px;
+            flex-shrink: 0;
+            border-radius: 16px;
+            cursor: zoom-in;
+        }
+        /* 反向布局：图左 文字右 */
+        .text-image-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* 移动端适配 */
+        @media(max-width:768px) {
+            .text-image-row {
+                flex-direction: column;
+            }
+
+                .text-image-row.reverse {
+                    flex-direction: column;
+                }
+
+            .side-small-img {
+                width: 100%;
+            }
+        }
+
+        /* 简易多图横向画廊 */
+        .mini-gallery {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+            .mini-gallery img {
+                width: 100%;
+                /* 固定统一高度，所有画廊卡片一样大 */
+                height: 320px;
+                object-fit: cover; /* 关键！图片自动铺满容器，超出部分裁切，不变形 */
+                border-radius: 12px;
+                cursor: zoom-in;
+            }
+
+        @media(max-width:768px) {
+            .mini-gallery {
+                grid-template-columns: 1fr;
+            }
+
+                .mini-gallery img {
+                    height: 260px; /* 手机端调低高度 */
+                }
+        }
+
+        /* Itch.io跳转按钮样式 */
+        .itch-link {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 22px;
+            background-color: #fa5c5c;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.2s ease;
+        }
+
+            .itch-link:hover {
+                background-color: #e04b4b;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 左侧侧边栏 完全复用首页结构 -->
+        <div class="sidebar">
+            <h1>YINGZHOU<br>ZHANG</h1>
+            <div class="role">
+                Game Artist <br>
+                & Developer
+            </div>
+            <nav>
+                <a href="index.html">WORK</a>
+                <a href="about.html">ABOUT</a>
+            </nav>
+            <div class="social">
+                <a href="https://x.com/annapatinaz?s=21">
+                    <img src="images/twitter.png" alt="X">
+                </a>
+                <a href="https://bsky.app/profile/annapatina.bsky.social">
+                    <img src="images/bluesky.png" alt="Bluesky">
+                </a>
+                <a href="https://www.artstation.com/annapatina">
+                    <img src="images/artstation.png" alt="ArtStation">
+                </a>
+            </div>
+        </div>
+
+        <!-- 右侧项目内容区 -->
+        <div class="project-page">
+            <a href="index.html" class="back-link">← Back to All Works</a>
+
+            <!-- 页面顶部通栏游戏主截图 -->
+            <img src="images/stars/itchio.jpg" alt="Stars 2.5D Game Cover" class="full-width-img">
+
+            <!-- 标题与标签 -->
+            <h2 class="project-title">Stars 2.5D Puzzle Platformer</h2>
+            <div class="project-tagline">
+                Unity Co-op Game | Puzzle Solving • 3D Platformer • Narrative Storytelling
+            </div>
+
+            <!-- 1. SUMMARY -->
+            <section class="case-section">
+                <h3>SUMMARY</h3>
+                <p>
+                    This low-poly 2.5D puzzle platform game was co-developed with a classmate for my Applied Programming university course, built entirely inside Unity. Core gameplay loops include puzzle solving, 3D platform traversal and emotional narrative storytelling. I took charge of core gameplay systems, asset creation, level design and full story writing throughout the production cycle.
+                </p>
+            </section>
+
+            <!-- 2. BACKSTORY -->
+            <section class="case-section">
+                <h3>BACKSTORY</h3>
+                <div class="text-image-row">
+                    <div class="text-block">
+                        <p>
+                            Players control Poppin, a little hedgehog with a quiet, lonely personality. Poppin and lamb Momo were inseparable childhood best friends, yet Poppin always felt overlooked as Momo was beloved by everyone around them. After Momo passed away in an accident, Poppin grows up isolated without close companions. One day Poppin dozes off during class, falling into a vivid dream where they revisit all precious memories shared with Momo.
+                        </p>
+                    </div>
+                    <img class="side-small-img" src="images/stars/fanart.jpg" alt="Poppin & Momo Dialogue Scene">
+                </div>
+            </section>
+
+            <!-- 3. PROBLEM / WORK STEP BY STEP -->
+            <section class="case-section">
+                <h3>PROBLEM / WORK STEP BY STEP</h3>
+
+                <h4 class="case-subtitle">My Production Responsibilities</h4>
+                <ul style="line-height: 1.7; padding-left: 1.2rem;">
+                    <li>Coding & implementing the magnet player ability system;</li>
+                    <li>Building all interactive scene objects and trigger logic;</li>
+                    <li>Designing and integrating full background audio & sound system;</li>
+                    <li>Creating all low-poly 3D scene & character models inside Blender;</li>
+                    <li>Drawing hand-painted 2D illustration assets for cutscenes & UI;</li>
+                    <li>Complete level layout design, puzzle pacing and narrative writing.</li>
+                </ul>
+
+                <h4 class="case-subtitle">Game Flow & Level Structure Planning</h4>
+                <p>
+                    I drafted a complete game flowchart to organize scene transitions, puzzle progression, memory flashback cutscenes and story beats, ensuring natural pacing between platform challenges and emotional story segments.
+                </p>
+                <img src="images/stars/flowchart.png" alt="Full Game Level Flow Chart" class="full-width-img">
+
+                <h4 class="case-subtitle">In-Game Screenshots & Asset Showcase</h4>
+                <p>
+                    Below are cutscene illustrations, character renders, environmental scene shots and key story props from the finished Unity build.
+                </p>
+                <div class="mini-gallery">
+                    <img src="images/stars/roof.png" alt="Poppin Hedgehog Character In-Game">
+                    <img src="images/stars/level1.jpeg" alt="April 7 Memory Calendar Prop">
+                    <img src="images/stars/calander.jpeg" alt="Night Backyard Platform Level">
+                    <img src="images/stars/level3.png" alt="Childhood Memory Cutscene Art">
+                </div>
+            </section>
+
+        
+
+            <!-- 5. OUTCOME -->
+            <section class="case-section">
+                <h3>OUTCOME</h3>
+                <div class="text-image-row reverse">
+                    <div class="text-block">
+                        <p>
+                            The complete playable demo has been published on Itch.io for public download and playtesting. All modular level assets and character models can be reused to expand additional story chapters in future updates.
+                        </p>
+                        <!-- Itch.io跳转按钮 -->
+                        <a href="https://jokiruru.itch.io/stars" target="_blank" class="itch-link">Visit Game Page on Itch.io</a>
+                    </div>
+                    <img class="side-small-img" src="images/stars/puzzle.png" alt="Itch.io Game Preview Thumbnail">
+                </div>
+            </section>
+
+            <!-- 6. REFLECTION -->
+            <section class="case-section">
+                <h3>REFLECTION</h3>
+                <ul style="line-height: 1.7; padding-left: 1.2rem;">
+                    <li>This was my first full collaborative Unity game project; I learned to split workload clearly with teammates and coordinate cross-discipline art & programming workflows;</li>
+                    <li>I mastered combining hand-drawn 2D narrative cutscenes with low-poly 3D real-time environments to create a cohesive emotional art style;</li>
+                    <li>Early game flowchart planning massively reduced rework during level building and puzzle balancing;</li>
+                    <li>In future updates I will expand more puzzle mechanics and extend the story to add extra memory chapters of Poppin and Momo.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- 底部丝带装饰 和首页统一 -->
+    <div class="ribbon-banner">
+        <img src="images/bow.png" alt="ribbon decoration">
+    </div>
+
+    <!-- 图片放大弹窗容器 -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="preview big" id="lightbox-img">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+        // 全部图片统一支持点击放大
+        const previewImages = document.querySelectorAll('.full-width-img, .side-small-img, .mini-gallery img, .main-preview-img');
+
+        previewImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            })
+        })
+
+        // 关闭弹窗逻辑不变
+        closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) lightbox.classList.remove('active');
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') lightbox.classList.remove('active');
+        })
+    </script>
+</body>
+</html>
