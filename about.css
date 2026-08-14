@@ -11,7 +11,7 @@ body {
     font-family: 'Inter',sans-serif;
 
 /* 图片路径，放到images文件夹 */
-    background-image: url("images/bg.JPG");
+    background-image: url("images/bg.jpg");
     /* 平铺重复 */
     background-repeat: no-repeat;
     /* 固定背景，滚动页面不会跟着动（可选，不想要就删掉这行） */
