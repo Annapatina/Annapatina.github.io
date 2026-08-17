@@ -89,13 +89,16 @@
         /* 简易多图横向画廊 */
         .mini-gallery {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(2,1fr);
             gap: 16px;
             margin: 20px 0;
         }
 
             .mini-gallery img {
                 width: 100%;
+                /* 固定统一高度，所有画廊卡片一样大 */
+                height: 320px;
+                object-fit: cover; /* 关键！图片自动铺满容器，超出部分裁切，不变形 */
                 border-radius: 12px;
                 cursor: zoom-in;
             }
@@ -104,8 +107,11 @@
             .mini-gallery {
                 grid-template-columns: 1fr;
             }
-        }
 
+                .mini-gallery img {
+                    height: 260px; /* 手机端调低高度 */
+                }
+        }
         /* Sketchfab嵌入框样式 */
         .sketchfab-wrap {
             width: 100%;
@@ -231,7 +237,11 @@
                 </div>
                 <div class="mini-gallery">
                     <img src="images/bathroom/tile.png" alt="Tile Material Cube Preview">
-                    <img src="images/bathroom/tilereference.jpg" alt="Tile Floral Detail Close-up">
+                    <!-- 右边：Reference图 + 下方文字 -->
+                    <div class="ref-card">
+                        <img src="images/bathroom/tilereference.jpg" alt="Bathroom tile reference">
+                        <p class="ref-caption">Reference</p>
+                    </div>
                 </div>
 
                 <h4 class="case-subtitle">Non-organic Materials</h4>
@@ -251,6 +261,10 @@
                 <div class="mini-gallery">
                     <img src="images/bathroom/papercutter.jpg" alt="Box Cutter Full Scene Shot">
                     <img src="images/bathroom/papercutterclose.jpg" alt="Ribbon & Gem Detail Close-up">
+                    <div class="ref-card">
+                        <img src="images/bathroom/boxcutterreference.jpg" alt="Bathroom tile reference">
+                        <p class="ref-caption">Reference</p>
+                    </div>
                 </div>
 
                 <!-- Toilet Paper Section -->
@@ -283,6 +297,10 @@
                 </div>
                 <div class="mini-gallery">
                     <img src="images/bathroom/piles.png" alt="Pill Pack In Bathroom Scene">
+                    <div class="ref-card">
+                        <img src="images/bathroom/pilereference.jpg" alt="Bathroom tile reference">
+                        <p class="ref-caption">Reference</p>
+                    </div>
                     <img src="images/bathroom/pile1.jpg" alt="Blister Top Node Graph">
                     <img src="images/bathroom/pile2.jpg" alt="Foil Back Node Graph">
                 </div>
@@ -304,8 +322,13 @@
                         <p>Two separate node graphs were built: one for the baked biscuit base, another for the cream chocolate coating with scattered cookie crumbs noise layers.</p>
                     </div>
                     <img class="side-small-img" src="images/bathroom/pocky.jpg" alt="Pocky In Scene Render">
+                    
                 </div>
                 <div class="mini-gallery">
+                    <div class="ref-card">
+                        <img src="images/bathroom/pockyreference.jpg" alt="Bathroom tile reference">
+                        <p class="ref-caption">Reference</p>
+                    </div>
                     <img src="images/bathroom/pocky1.jpg" alt="Pocky Base Node Graph">
                     <img src="images/bathroom/pocky2.jpg" alt="Cream Coating Node Graph">
                 </div>
