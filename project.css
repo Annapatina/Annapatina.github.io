@@ -96,6 +96,19 @@
   user-select: none;
 }
 
+.ref-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ref-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #444;
+    margin: 0;
+}
+
 /* 移动端适配 */
 @media(max-width:900px) {
     .main-preview-img {
